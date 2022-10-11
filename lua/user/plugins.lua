@@ -6,7 +6,35 @@ end
 
 return require('packer').startup(function(use)
 
+    -- packet itself
     use 'wbthomason/packer.nvim'
+
+    -- lsp, completion, etc...
+    use 'neovim/nvim-lspconfig'
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'saadparwaiz1/cmp_luasnip'    
+    use 'L3MON4D3/LuaSnip'
+    use 'nvim-treesitter/nvim-treesitter'
+    use 'bash-lsp/bash-language-server'
+    use 'mfussenegger/nvim-jdtls'
+
+    -- themes
+    use 'doums/darcula'
+    use 'tanvirtin/monokai.nvim'
+    use 'Mofiqul/dracula.nvim'
+
+    -- other stuff
+    use 'tomtom/tcomment_vim'
+    use 'Raimondi/delimitMate'
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 
+            'kyazdani42/nvim-web-devicons', opt = true 
+        }
+    }
     use {
         'nvim-telescope/telescope.nvim', 
         tag = '0.1.0',
@@ -15,27 +43,6 @@ return require('packer').startup(function(use)
             {'BurntSushi/ripgrep'},
             {'nvim-telescope/telescope-fzy-native.nvim'},
             {'nvim-telescope/telescope-file-browser.nvim'}
-        }
-    }
-    use 'tanvirtin/monokai.nvim'
-    use 'neovim/nvim-lspconfig'
-    use 'Raimondi/delimitMate'
-    use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
-    use 'saadparwaiz1/cmp_luasnip'    
-    use 'L3MON4D3/LuaSnip'
-    use 'tomtom/tcomment_vim'
-    use 'nvim-treesitter/nvim-treesitter'
-    use 'Mofiqul/dracula.nvim'
-    use 'bash-lsp/bash-language-server'
-    use 'mfussenegger/nvim-jdtls'
-    use 'doums/darcula'
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 
-            'kyazdani42/nvim-web-devicons', opt = true 
         }
     }
 

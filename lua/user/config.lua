@@ -27,7 +27,8 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.completeopt={"menu","menuone","noselect"}
 
 -- Color
-vim.cmd[[colorscheme monokai_ristretto]]
+vim.cmd 'colorscheme monokai_ristretto'
+vim.cmd 'set termguicolors'
 
 --
 vim.cmd[[syntax enable]]
@@ -35,4 +36,10 @@ vim.cmd[[filetype plugin indent on]]
 
 -- From plugins
 vim.g.delimitMate_expand_cr = 1
-require('lualine').setup()
+
+-- lualine
+require('lualine').setup {
+    options = {
+        theme = 'material',
+    }
+}
