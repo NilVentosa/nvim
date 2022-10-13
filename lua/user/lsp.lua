@@ -17,11 +17,6 @@ require 'lspconfig'.rust_analyzer.setup{
         vim.keymap.set("n", "<leader>dk", vim.diagnostic.goto_prev, {buffer=0})
         vim.keymap.set("n", "<leader>D", vim.diagnostic.open_float, {buffer=0})
         vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<CR>", {buffer=0})
-        -- cargo
-        vim.keymap.set("n", "<leader>rr", "<cmd>!cargo run --color=never<CR>", {buffer=0})
-        vim.keymap.set("n", "<leader>rt", "<cmd>!cargo test --color=never<CR>", {buffer=0})
-        vim.keymap.set("n", "<leader>rf", "<cmd>!cargo fmt --color=never<CR>", {buffer=0})
-        vim.keymap.set("n", "<leader>rc", "<cmd>!cargo clippy --color=never<CR>", {buffer=0})
     end,
 }
 
