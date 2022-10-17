@@ -9,7 +9,7 @@ keymap('n', '<c-u>', '15k',{})
 keymap('n', '<c-d>', '15j',{})
 
 -- Open files under cursor in splits
-keymap('n', 'gs', ':vertical wincmd f<CR>', {})
+keymap('n', 'gv', ':vertical wincmd f<CR>', {})
 keymap('n', 'gh', '<C-W>f', {})
 
 -- JSON formatting

@@ -45,6 +45,12 @@ return require('packer').startup(function(use)
             {'nvim-telescope/telescope-file-browser.nvim'}
         }
     }
+    use {
+        'ggandor/leap.nvim',
+        requires = {
+            'tpope/vim-repeat'
+        }
+    }
 
     if packer_bootstrap then
         require('packer').sync()

@@ -36,6 +36,7 @@ vim.cmd[[filetype plugin indent on]]
 
 -- From plugins
 vim.g.delimitMate_expand_cr = 1
+require('leap').add_default_mappings()
 
 -- lualine
 require('lualine').setup {
