@@ -6,7 +6,7 @@ end
 
 return require('packer').startup(function(use)
 
-    -- packet itself
+    -- packer itself
     use 'wbthomason/packer.nvim'
 
     -- lsp, completion, etc...
