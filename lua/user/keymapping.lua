@@ -5,8 +5,8 @@ local keymap = vim.api.nvim_set_keymap
 vim.g.mapleader = " "
 
 -- Move
-keymap('n', '<c-u>', '15k',{})
-keymap('n', '<c-d>', '15j',{})
+keymap('n', '<c-u>', '15kzz',{})
+keymap('n', '<c-d>', '15jzz',{})
 
 -- Open files under cursor in splits
 keymap('n', 'gv', ':vertical wincmd f<CR>', {})
