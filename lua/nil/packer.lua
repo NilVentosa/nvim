@@ -41,10 +41,12 @@ return require('packer').startup(function(use)
 
     use {
         'nvim-lualine/lualine.nvim',
-        requires = { 
+        requires = {
             'kyazdani42/nvim-web-devicons', opt = true
         }
     }
     use 'Raimondi/delimitMate'
     use 'tomtom/tcomment_vim'
+    -- use 'github/copilot.vim'
+    use 'vimwiki/vimwiki'
 end)

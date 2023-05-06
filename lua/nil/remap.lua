@@ -9,6 +9,8 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-j>", "10jzz")
 vim.keymap.set("n", "<C-k>", "10kzz")
+vim.keymap.set("v", "<C-j>", "10jzz")
+vim.keymap.set("v", "<C-k>", "10kzz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 

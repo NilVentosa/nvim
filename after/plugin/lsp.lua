@@ -3,7 +3,6 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.ensure_installed({
-	'sumneko_lua',
 	'rust_analyzer',
 	'gopls',
 	'jdtls'
@@ -17,11 +16,15 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 	['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
 	['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
 	['<C-y>'] = cmp.mapping.confirm({ select = true }),
+	['<C-x>'] = cmp.mapping.confirm({ select = false }),
 	["<C-Space>"] = cmp.mapping.complete(),
 })
 
 lsp.setup_nvim_cmp({
-	mapping = cmp_mappings
+	mapping = cmp_mappings,
+    completion = {
+      autocomplete = true,
+    }
 })
 
 lsp.on_attach(function(client, bufnr)
