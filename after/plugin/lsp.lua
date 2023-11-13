@@ -22,9 +22,9 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 
 lsp.setup_nvim_cmp({
 	mapping = cmp_mappings,
-    completion = {
-      autocomplete = true,
-    }
+    -- completion = {
+    --   autocomplete = true,
+    -- }
 })
 
 lsp.on_attach(function(client, bufnr)

@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
     use 'doums/darcula'
     use 'rose-pine/neovim'
     use 'Mofiqul/dracula.nvim'
+    use 'sainnhe/everforest'
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -49,4 +50,5 @@ return require('packer').startup(function(use)
     use 'tomtom/tcomment_vim'
     -- use 'github/copilot.vim'
     use 'vimwiki/vimwiki'
+    use 'mfussenegger/nvim-jdtls'
 end)
