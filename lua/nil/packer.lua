@@ -4,14 +4,12 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.0',
+		'nvim-telescope/telescope.nvim', tag = '0.1.4',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-	use('mbbill/undotree')
 
     -- Color schemes
-	use 'tpope/vim-fugitive'
     use 'tanvirtin/monokai.nvim'
     use 'doums/darcula'
     use 'rose-pine/neovim'
@@ -46,9 +44,11 @@ return require('packer').startup(function(use)
             'kyazdani42/nvim-web-devicons', opt = true
         }
     }
-    use 'Raimondi/delimitMate'
     use 'tomtom/tcomment_vim'
     -- use 'github/copilot.vim'
-    use 'vimwiki/vimwiki'
-    use 'mfussenegger/nvim-jdtls'
+    use 'Olical/conjure'
+	use 'tpope/vim-fugitive'
+    use 'tpope/vim-surround'
+
+    use 'luochen1990/rainbow'
 end)

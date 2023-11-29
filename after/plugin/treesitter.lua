@@ -1,6 +1,5 @@
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "c", "lua", "rust", "help", "bash", "go", "java", "kotlin", "hcl",
-    "vim"},
+    ensure_installed = { "c", "lua", "rust", "help", "bash", "go", "java", "kotlin", "hcl", "vim", "clojure"},
     sync_install = false,
     auto_install = true,
     highlight = {
