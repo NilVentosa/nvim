@@ -1,5 +1,0 @@
-vim.keymap.set("n", "<leader>cr", "<cmd>!cargo run --color=never<CR>", {buffer=0})
-vim.keymap.set("n", "<leader>cb", "<cmd>!cargo build --color=never<CR>", {buffer=0})
-vim.keymap.set("n", "<leader>ct", "<cmd>!cargo test --color=never<CR>", {buffer=0})
-vim.keymap.set("n", "<leader>cf", "<cmd>!cargo fmt<CR>", {buffer=0})
-vim.keymap.set("n", "<leader>cc", "<cmd>!cargo check --color=never<CR>", {buffer=0})
