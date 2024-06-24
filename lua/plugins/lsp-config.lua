@@ -15,10 +15,26 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-cmdline",
+			"hrsh7th/nvim-cmp",
+			"L3MON4D3/LuaSnip",
+			"saadparwaiz1/cmp_luasnip",
+			"j-hui/fidget.nvim",
+		},
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.rubocop.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.gopls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.jdtls.setup({
