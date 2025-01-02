@@ -8,5 +8,22 @@ return {
     },
     config = function()
         vim.keymap.set('n', '<C-n>', ':Neotree filesystem toggle left<CR>', {})
-    end
+    end,
+    opts = {
+    filesystem = {
+      filtered_items = {
+        visible = true,
+        hide_gitignored = true,
+        hide_dotfiles = false,
+        hide_by_name = {
+          ".github",
+          ".gitignore",
+          "package-lock.json",
+          ".changeset",
+          ".prettierrc.json",
+        },
+        never_show = { ".git" },
+      },
+    },
+  },
 }
