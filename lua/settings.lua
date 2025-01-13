@@ -7,9 +7,9 @@ vim.keymap.set("n", "<leader>ft", vim.cmd.Ex)
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
@@ -74,48 +74,3 @@ vim.keymap.set("n", "<Up>", "<C-w>+")
 vim.keymap.set("n", "<Down>", "<C-w>-")
 vim.keymap.set("n", "<Left>", "<C-w><")
 vim.keymap.set("n", "<Right>", "<C-w>>")
-
-
-
-
--- Create a function to execute the `ri` command and display the output
-local function show_ri_output()
-  -- Get the word under the cursor
-  local word = vim.fn.expand("<cword>")
-  if word == "" then
-    vim.notify("No word under cursor", vim.log.levels.WARN)
-    return
-  end
-
-  -- Run the `ri` command
-  local output = vim.fn.system("ri " .. word)
-
-  -- Check for errors
-  if vim.v.shell_error ~= 0 then
-    vim.notify("Error running `ri`: " .. output, vim.log.levels.ERROR)
-    return
-  end
-
-  -- Create a floating window to display the output
-  local buf = vim.api.nvim_create_buf(false, true) -- Create a new scratch buffer
-  vim.api.nvim_buf_set_lines(buf, 0, -1, false, vim.split(output, "\n")) -- Set the output
-
-  -- Configure the floating window
-  local width = math.min(80, vim.o.columns - 4)
-  local height = math.min(20, vim.o.lines - 4)
-  local opts = {
-    relative = "editor",
-    width = width,
-    height = height,
-    row = (vim.o.lines - height) / 2,
-    col = (vim.o.columns - width) / 2,
-    style = "minimal",
-    border = "rounded",
-  }
-
-  vim.api.nvim_open_win(buf, true, opts)
-end
-
--- Set a key binding to trigger the function
-vim.keymap.set("n", "<leader>ri", show_ri_output, { desc = "Run `ri` on word under cursor" })
-
