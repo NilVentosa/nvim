@@ -10,7 +10,7 @@ return {
             highlight = { enable = true },
             indent = {
                 enable = true,
-                disable = { "ruby" },
+                -- disable = { "ruby" },
             },
         })
     end

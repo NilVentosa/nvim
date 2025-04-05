@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ";"
-vim.opt.guicursor = ""
+-- vim.opt.guicursor = ""
 
 vim.keymap.set("n", "<leader>ft", vim.cmd.Ex)
 
